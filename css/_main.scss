@@ -285,9 +285,27 @@
     background-size: cover;
     background-position: center;
     padding-top: rem(50);
-    padding-bottom: rem(50);
-    // .checkout__container
+    padding-bottom: rem(100);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(100);
+        top: 0;
+        background: linear-gradient(179.87deg, #262626 2.76%, rgba(38, 38, 38, 0) 99.94%);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(100);
+        bottom: 0;
+        background: linear-gradient(359.89deg, #262626 0.1%, rgba(38, 38, 38, 0) 99.9%);
+    }
     &__container {
+        position: relative;
+        z-index: 2;
     }
     // .checkout__titile
     &__titile {
@@ -307,6 +325,7 @@
 }
 
 .form {
+    max-width: rem(300);
     // .form__buttont
     // .form__input
     &__input {
@@ -316,16 +335,16 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        color: #6C6C6C;
+        color: #F2F2F2;
         padding: rem(18);
-        width: rem(266);
+        width: 100%;
         display: block;
         margin-bottom: rem(20);
         &:nth-child(3) {
             margin-bottom: rem(40);
         }
         &:focus {
-            color: #F2F2F2;
+            box-shadow: -4px -4px 10px rgba(0, 163, 255, 0.5), 4px 4px 10px rgba(0, 163, 255, 0.5), inset -5px 5px 10px #1F1F1F, inset 5px -5px 10px #2D2D2D;
         }
     }
     &__buttont {

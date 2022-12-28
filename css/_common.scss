@@ -5,7 +5,7 @@
     box-shadow: 5px -5px 10px #2D2D2D, -5px 5px 10px #1F1F1F;
     border-radius: rem(35);
     transition: all .3s;
-    &:hover {
+    &:hover, &:focus {
         color: #00A3FF;
     }
     &:active {
