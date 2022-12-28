@@ -1,0 +1,28 @@
+.header {
+    padding: rem(15) rem(0);
+    // .header__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.menu {
+    // .menu__list
+    &__list {
+        display: flex;
+        gap: rem(45);
+        flex-wrap: wrap;
+    }
+    // .menu__item
+    &__item {
+        transition: all .3s;
+        &._activ {
+            color: #00A3FF;
+        }
+        &:hover {
+            color: #00A3FF;
+        }
+    }
+}
+

@@ -1,0 +1,22 @@
+.footer {
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    // .footer__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.links-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(50);
+    // .links-footer__item
+    &__item {
+        transition: .5s;
+        &:hover{
+            transform: rotate(-30deg);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+    background: #262626;
+    color: #77C0C5;
+    box-shadow: 5px -5px 10px #2D2D2D, -5px 5px 10px #1F1F1F;
+    border-radius: rem(35);
+    transition: all .3s;
+    &:hover {
+        color: #00A3FF;
+    }
+    &:active {
+        background: linear-gradient(180deg, #222222 0%, #292929 100%);
+        box-shadow: 5px -5px 10px #2D2D2D, -5px 5px 10px #1F1F1F, inset 5px -5px 10px #2D2D2D, inset -5px 5px 10px #1F1F1F;
+    }
+}
+
+.h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
