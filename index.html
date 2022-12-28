@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="shortcut icon" href="img/icons/favicon.ico">
@@ -13,7 +13,7 @@
 </head>
 
 <body class="page">
-  
+
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
@@ -29,6 +29,7 @@
             <li class="menu__item"><a href="#checkout">Checkout</a></li>
           </ul>
         </nav>
+        <button class="menu__icon icon-menu"><span></span></button>
       </div>
     </header>
 
@@ -116,9 +117,9 @@
       <section class="product" id="product">
         <div class="product__container">
           <h2 class="product__title h2">Product</h2>
-          <div class="product__slider slider">
-            <div class="slider__cards">
-              <div class="slider__card card">
+          <div class="product__slider slider swiper myGallery">
+            <div class="slider__cards swiper-wrapper">
+              <div class=" card swiper-slide">
                 <div class="card__img">
                   <img src="img/white.png" alt="White">
                 </div>
@@ -133,7 +134,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider__card card">
+              <div class=" card swiper-slide">
                 <div class="card__img">
                   <img src="img/blue.png" alt="White">
                 </div>
@@ -148,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slider__card card">
+              <div class=" card swiper-slide">
                 <div class="card__img">
                   <img src="img/pink.png" alt="White">
                 </div>
@@ -163,7 +164,55 @@
                   </div>
                 </div>
               </div>
+              <div class=" card swiper-slide">
+                <div class="card__img">
+                  <img src="img/yellow.png" alt="White">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title h3">Yellow</h3>
+                  <span class="card__info">Light source: LED</span>
+                  <span class="card__info">Waterproof: Not waterproof</span>
+                  <span class="card__info">Glow Color: Warm</span>
+                  <div class="card__bottom">
+                    <span class="card__price">3$</span>
+                    <button class="card__button button">MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" card swiper-slide">
+                <div class="card__img">
+                  <img src="img/turquoise.png" alt="White">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title h3">Turquoise</h3>
+                  <span class="card__info">Light source: LED</span>
+                  <span class="card__info">Waterproof: Not waterproof</span>
+                  <span class="card__info">Glow Color: Warm</span>
+                  <div class="card__bottom">
+                    <span class="card__price">3$</span>
+                    <button class="card__button button">MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" card swiper-slide">
+                <div class="card__img">
+                  <img src="img/red.png" alt="White">
+                </div>
+                <div class="card__description">
+                  <h3 class="card__title h3">Red</h3>
+                  <span class="card__info">Light source: LED</span>
+                  <span class="card__info">Waterproof: Not waterproof</span>
+                  <span class="card__info">Glow Color: Warm</span>
+                  <div class="card__bottom">
+                    <span class="card__price">3$</span>
+                    <button class="card__button button">MORE</button>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -176,28 +225,32 @@
               <div class="item-reviews__img">
                 <img src="img/review1.jpg" alt="Photo">
               </div>
-              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
+              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit
+                amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
               <span class="item-reviews__name">Paul Smith</span>
             </div>
             <div class="reviews__item item-reviews">
               <div class="item-reviews__img">
                 <img src="img/review2.jpg" alt="Photo">
               </div>
-              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
+              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit
+                amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
               <span class="item-reviews__name">Paul Smith</span>
             </div>
             <div class="reviews__item item-reviews">
               <div class="item-reviews__img">
                 <img src="img/review3.jpg" alt="Photo">
               </div>
-              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
+              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit
+                amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
               <span class="item-reviews__name">Paul Smith</span>
             </div>
             <div class="reviews__item item-reviews">
               <div class="item-reviews__img">
                 <img src="img/review1.jpg" alt="Photo">
               </div>
-              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
+              <p class="item-reviews__text">Proison sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit
+                amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl.</p>
               <span class="item-reviews__name">Paul Smith</span>
             </div>
           </div>
@@ -208,16 +261,16 @@
         <div class="checkout__container">
           <h2 class="checkout__titile h2">Checkout</h2>
           <div class="checkout__wrap">
-          <form class="checkout__form form" action="">
-            <input class="form__input" type="text" placeholder="Your name">
-            <input class="form__input"  type="text" placeholder="Mail">
-            <input class="form__input"  type="text" placeholder="Phone">
-            <button class="form__buttont button">TO ORDER</button>
-          </form>
-          <!-- <div class="checkout__img">
+            <form class="checkout__form form" action="">
+              <input class="form__input" type="text" placeholder="Your name">
+              <input class="form__input" type="text" placeholder="Mail">
+              <input class="form__input" type="text" placeholder="Phone">
+              <button class="form__buttont button">TO ORDER</button>
+            </form>
+            <!-- <div class="checkout__img">
             <img src="img/checkout-background.png" alt="">
           </div> -->
-        </div>
+          </div>
         </div>
       </section>
     </main>
@@ -235,7 +288,7 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
   </div>

@@ -170,29 +170,38 @@
 
 .product {
     padding-top: rem(50);
-    padding-bottom: rem(100);
+    padding-bottom: rem(90);
 
     &__title {
         text-align: center;
-        margin-bottom: rem(50);
+        margin-bottom: rem(40);
     }
 }
+
 .slider {
     &__cards {
     display: flex;
-    justify-content: center;
-    gap: rem(50);
+    align-items: center;    
     }
 }
+.swiper {
+    padding: 10px 80px;
+}
+
+.myGallery .swiper-button-prev::after,
+.myGallery .swiper-button-next::after {
+    color: #00A3FF;
+}
+
 .card {
-    max-width: rem(250);
+    height: 90%;
     background: #313131;
     box-shadow: 5px -5px 10px #1F1F1F, -5px 5px 10px #1F1F1F;
     border-radius: 10px;
     &__img {
         text-align: center;
         & img {
-            width: 78%;
+            width: 60%;
             height: auto;
         }
     }
