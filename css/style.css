@@ -296,6 +296,12 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 29.99875em) {
+  .footer__container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
 
 .links-footer {
   display: flex;
@@ -318,15 +324,47 @@ h6 {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 47.99875em) {
+  .home__container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
 .home__content {
   flex-basis: 50%;
   max-width: 33.125rem;
 }
+@media (max-width: 47.99875em) {
+  .home__content {
+    text-align: center;
+  }
+}
 .home__title {
   font-weight: 600;
-  font-size: 3.75rem;
   line-height: 4.5625rem;
   margin-bottom: 1.875rem;
+}
+@media (min-width: 77.5em) {
+  .home__title {
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (font-size: clamp( 2.5rem , 2.0652173913rem  +  2.1739130435vw , 3.75rem )) {
+    .home__title {
+      font-size: clamp( 2.5rem , 2.0652173913rem  +  2.1739130435vw , 3.75rem );
+    }
+  }
+  @supports not (font-size: clamp( 2.5rem , 2.0652173913rem  +  2.1739130435vw , 3.75rem )) {
+    .home__title {
+      font-size: calc(2.5rem + 1.25 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .home__title {
+    font-size: 2.5rem;
+  }
 }
 .home__list {
   display: flex;
@@ -351,6 +389,12 @@ h6 {
   position: relative;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 47.99875em) {
+  .about__container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 }
 .about__title {
   position: absolute;
@@ -434,8 +478,34 @@ h6 {
   align-items: center;
 }
 .card__button {
-  font-size: 16px;
   padding: 0.3125rem 2.125rem;
+}
+@media (min-width: 77.5em) {
+  .card__button {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem )) {
+    .card__button {
+      font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem )) {
+    .card__button {
+      font-size: calc(0.625rem + 0.375 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .card__button {
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .card__button {
+    padding: 0.25rem 1.25rem;
+  }
 }
 
 .reviews {
@@ -449,10 +519,55 @@ h6 {
 .reviews__cards {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 9.375rem;
-       column-gap: 9.375rem;
-  row-gap: 5rem;
   flex-wrap: wrap;
+}
+@media (min-width: 77.5em) {
+  .reviews__cards {
+    -moz-column-gap: 9.375rem;
+         column-gap: 9.375rem;
+  }
+}
+@media (min-width: 47.9375em) and (max-width: 77.5em) {
+  @supports ((-moz-column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem )) or (column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem ))) {
+    .reviews__cards {
+      -moz-column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem );
+           column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem );
+    }
+  }
+  @supports not ((-moz-column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem )) or (column-gap: clamp( 3.125rem , -7.0097780127rem  +  21.1416490486vw , 9.375rem ))) {
+    .reviews__cards {
+      -moz-column-gap: calc(3.125rem + 6.25 * (100vw - 47.9375rem) / 29.5625);
+           column-gap: calc(3.125rem + 6.25 * (100vw - 47.9375rem) / 29.5625);
+    }
+  }
+}
+@media (max-width: 47.9375em) {
+  .reviews__cards {
+    -moz-column-gap: 3.125rem;
+         column-gap: 3.125rem;
+  }
+}
+@media (min-width: 77.5em) {
+  .reviews__cards {
+    row-gap: 5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (row-gap: clamp( 3.125rem , 2.472826087rem  +  3.2608695652vw , 5rem )) {
+    .reviews__cards {
+      row-gap: clamp( 3.125rem , 2.472826087rem  +  3.2608695652vw , 5rem );
+    }
+  }
+  @supports not (row-gap: clamp( 3.125rem , 2.472826087rem  +  3.2608695652vw , 5rem )) {
+    .reviews__cards {
+      row-gap: calc(3.125rem + 1.875 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .reviews__cards {
+    row-gap: 3.125rem;
+  }
 }
 
 .item-reviews {
@@ -464,6 +579,11 @@ h6 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 47.99875em) {
+  .item-reviews {
+    padding: 1.5625rem 0.9375rem 0.9375rem 1.875rem;
+  }
+}
 .item-reviews__img {
   border-radius: 50%;
   position: absolute;
@@ -471,13 +591,41 @@ h6 {
   top: -25%;
 }
 .item-reviews__img img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
+}
+@media (max-width: 47.99875em) {
+  .item-reviews__img {
+    display: none;
+  }
 }
 .item-reviews__text {
   font-weight: 400;
-  font-size: 1rem;
   line-height: 125%;
   margin-bottom: 0.9375rem;
+}
+@media (min-width: 77.5em) {
+  .item-reviews__text {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 77.5em) {
+  @supports (font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem )) {
+    .item-reviews__text {
+      font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.625rem , 0.4945652174rem  +  0.652173913vw , 1rem )) {
+    .item-reviews__text {
+      font-size: calc(0.625rem + 0.375 * (100vw - 20rem) / 57.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .item-reviews__text {
+    font-size: 0.625rem;
+  }
 }
 .item-reviews__name {
   align-self: flex-end;
@@ -526,6 +674,23 @@ h6 {
 
 .form {
   max-width: 18.75rem;
+  position: relative;
+}
+.form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5625rem;
+  background: rgba(38, 38, 38, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+.form._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 .form__input {
   background: #262626;
@@ -545,6 +710,9 @@ h6 {
 }
 .form__input:focus {
   box-shadow: -4px -4px 10px rgba(0, 163, 255, 0.5), 4px 4px 10px rgba(0, 163, 255, 0.5), inset -5px 5px 10px #1F1F1F, inset 5px -5px 10px #2D2D2D;
+}
+.form__input._error {
+  box-shadow: -4px -4px 10px rgba(255, 52, 137, 0.5), 4px 4px 10px rgba(255, 52, 137, 0.5), inset -5px 5px 10px #1F1F1F, inset 5px -5px 10px #2D2D2D;
 }
 .form__buttont {
   padding: 0.875rem 4.875rem;
