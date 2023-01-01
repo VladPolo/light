@@ -7,6 +7,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            gap: rem(20);
+        }
     }
 }
 .links-footer {

@@ -19,8 +19,6 @@ function showMenu() {
     html.classList.toggle("lock");
 }
 
-
-
 //Сдайдер галереии
 var swiper = new Swiper(".myGallery", {
     spaceBetween: 100,
